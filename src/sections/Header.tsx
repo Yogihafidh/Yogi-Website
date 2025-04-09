@@ -1,7 +1,7 @@
 export const Header = () => {
   return (
-    <div className="flex justify-center items-center relative top-3  ">
-      <nav className="flex p-1 rounded-full shadow-md border border-gray-100 gap-1 ">
+    <div className="flex justify-center items-center fixed top-3 w-full z-50 ">
+      <nav className="flex p-1 rounded-full shadow-sm border bg-white/10 backdrop-blur border-gray-200 gap-1 ">
         <a href="#" className="nav-item">
           Home
         </a>
