@@ -1,14 +1,17 @@
 import Image from "next/image";
 import YogiImage from "@/assets/images/logo.png";
 import grainImage from "@/assets/images/grain.jpg";
-import { HeroOrbit } from "@/components/HeroOrbit";
+import { FaReact } from "react-icons/fa";
+import { FaFigma } from "react-icons/fa";
+import { FaGolang } from "react-icons/fa6";
 
 export const HeroSection = () => {
   return (
     <div className="relative z-0 overflow-x-clip">
-      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_80%,transparent)]">
+      {/* Background */}
+      <div className="absolute -z-20 inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_80%,transparent)]">
         <div
-          className="absolute inset-0 -z-20 opacity-5"
+          className="absolute inset-0  opacity-5"
           style={{ backgroundImage: `url(${grainImage.src})` }}
         ></div>
         <div className="size-[20px] hero-ring "></div>
@@ -20,13 +23,9 @@ export const HeroSection = () => {
         <div className="size-[1440px] hero-ring "></div>
       </div>
 
-      <div className="container py-32 md:py-40 text-gray-900">
+      {/* Hero */}
+      <div className="container pt-32 md:pt-40 text-gray-900">
         <div className="text-center flex flex-col items-center">
-          <Image
-            src={YogiImage}
-            alt="Yogi Photo"
-            className="size-[250px] sm:size-[300px] mb-10"
-          />
           <p className=" text-xl">Hello!</p>
           <div className="max-w-7xl mx-auto">
             <h1 className="md:text-7xl text-5xl font-bold  space-y-4 mb-8">
@@ -45,14 +44,74 @@ export const HeroSection = () => {
               developer.
             </p>
           </div>
+        </div>
+      </div>
 
-          <div className="flex flex-col md:flex-row  justify-center items-center gap-5 ">
-            <button className="font-semibold border-2 border-gray-200 hover:bg-gray-200 px-6 py-3 rounded-xl cursor-pointer">
+      {/* Hero CTA */}
+      <div className="text-center -mt-28 sm:-mt-32 md:-mt-40">
+        <div className="relative ">
+          <div className="bg-gray-100 border w-max border-gray-300 p-1.5 rounded-full flex justify-center items-center gap-3 absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-10 sm:translate-y-1/2 md:translate-y-32 z-20">
+            <button className="w-fit font-semibold border-2 border-gray-500 hover:bg-gray-200 px-3 py-1 md:px-6 md:py-3 rounded-full  cursor-pointer">
               Explore My Project
             </button>
-            <button className="border border-gray-500 bg-gray-950 hover:bg-gray-700 text-white px-6 py-3 rounded-xl cursor-pointer">
+            <button className="w-fit border border-gray-500 bg-gray-950 hover:bg-gray-700 text-white px-3 py-1 md:px-6 md:py-3 rounded-full cursor-pointer">
               Lets Connect
             </button>
+          </div>
+
+          <Image
+            src={YogiImage}
+            alt="Yogi Photo"
+            className="scale-75 -mb-10 sm:-mb-20 md:-mb-28 lg:-mb-28 mx-auto"
+          />
+        </div>
+
+        <div className="bg-gray-950 text-white w-full rounded-[32px] py-20 relative z-10 ">
+          <div>
+            <p className="text-lg mb-2 font-bold">SKILL SET</p>
+            <h1 className="text-5xl font-bold mb-20">Services I Provide</h1>
+
+            <div className="flex flex-col md:flex-row gap-10 items-center justify-between px-10">
+              <div className="bg-gray-200/10 rounded-full h-[500px]  backdrop-blur mx-auto p-10">
+                <div className="bg-gray-300/20 p-5 rounded-full size-fit mx-auto mb-10">
+                  <FaFigma className="text-8xl text-white" />
+                </div>
+
+                <h2 className="text-3xl font-semibold mb-3">UI UX Design</h2>
+                <p>
+                  SEO improve website visibility, ranking, and organic trafic
+                  online website visibility ranking
+                </p>
+              </div>
+
+              <div className="bg-white rounded-full h-[500px] backdrop-blur mx-auto p-10 text-gray-900">
+                <div className="bg-gray-500/20 p-5 rounded-full size-fit mx-auto mb-10">
+                  <FaReact className="text-8xl " />
+                </div>
+
+                <h2 className="text-3xl font-semibold mb-3">
+                  Frontend Development
+                </h2>
+                <p>
+                  SEO improve website visibility, ranking, and organic trafic
+                  online website visibility ranking
+                </p>
+              </div>
+
+              <div className="bg-gray-200/10 rounded-full h-[500px] backdrop-blur mx-auto p-10">
+                <div className="bg-gray-300/20 p-5 rounded-full size-fit mx-auto mb-10">
+                  <FaGolang className="text-8xl text-white" />
+                </div>
+
+                <h2 className="text-3xl font-semibold mb-3">
+                  Backend Development
+                </h2>
+                <p>
+                  SEO improve website visibility, ranking, and organic trafic
+                  online website visibility ranking
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

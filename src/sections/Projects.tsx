@@ -42,5 +42,11 @@ const portfolioProjects = [
 ];
 
 export const ProjectsSection = () => {
-  return <div>Projects Section</div>;
+  return (
+    <div>
+      <p>Real-world Result</p>
+      <h1>Featured Project</h1>
+      <p></p>
+    </div>
+  );
 };
