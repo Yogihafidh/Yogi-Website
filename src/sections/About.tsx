@@ -1,3 +1,9 @@
+import { SectionHeader } from "@/components/SeactionHeader";
+
 export const AboutSection = () => {
-  return <div>About Section</div>;
+  return (
+    <div>
+      <SectionHeader eyebrow="" title="" description="" />
+    </div>
+  );
 };

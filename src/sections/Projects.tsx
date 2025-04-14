@@ -5,6 +5,8 @@ import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
+import { SectionHeader } from "@/components/SeactionHeader";
+import { Card } from "@/components/Card";
 
 const portfolioProjects = [
   {
@@ -60,25 +62,18 @@ const portfolioProjects = [
 export const ProjectsSection = () => {
   return (
     <section className="container text-center pt-28 md:pt-40">
-      <p className="uppercase font-semibold tracking-widest  mb-4">
-        Real-world Result
-      </p>
-      <h1 className="font-serif text-3xl md:text-5xl mb-4">Featured Project</h1>
-      <p className="mb-10 md:mb-20 md:text-lg">
-        See what I have been working on as a software engineer
-      </p>
+      <SectionHeader
+        eyebrow="Real-world Result"
+        title="Featured Project"
+        description="See what I have been working on as a software engineer"
+      />
 
       <div className="flex flex-col text-left">
         {portfolioProjects.map((project) => (
-          <div
+          <Card
             key={project.title}
-            className="bg-gray-100/50 rounded-3xl relative z-0 overflow-hidden after:content-[''] after:-z-10 after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-3xl after:outline-gray-900/20 px-8 pt-8 mb-20 md:px-10 md:pt-12 lg:pt-16 lg:px-20"
+            className="px-8 pt-8 pb-0 mb-20 md:px-10 md:pt-12 lg:pt-16 lg:px-20"
           >
-            <div
-              style={{ backgroundImage: `url(${grainImage.src})` }}
-              className="inset-0 absolute -z-10 opacity-10"
-            ></div>
-
             <div className="lg:grid lg:grid-cols-2 lg:gap-16">
               <div className="lg:pb-16">
                 <div className="font-bold uppercase tracking-widest inline-flex gap-2 mb-2 md:mb-5">
@@ -124,7 +119,7 @@ export const ProjectsSection = () => {
                 />
               </div>
             </div>
-          </div>
+          </Card>
         ))}
       </div>
     </section>
