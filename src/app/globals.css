@@ -11,3 +11,9 @@
     @apply absolute inset-0 border-2 border-gray-300/5 shadow-[inset_0_0_80px] shadow-gray-400/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full -z-10;
   }
 }
+
+@layer utilities {
+  .container {
+    @apply lg:max-w-5xl;
+  }
+}

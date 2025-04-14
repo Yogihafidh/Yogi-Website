@@ -9,7 +9,7 @@ export const HeroSection = () => {
   return (
     <div className="relative z-0 overflow-x-clip">
       {/* Background */}
-      <div className="absolute -z-20 inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_80%,transparent)]">
+      <div className="absolute -z-20 inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_1%,black_80%,transparent)]">
         <div
           className="absolute inset-0  opacity-5"
           style={{ backgroundImage: `url(${grainImage.src})` }}
@@ -28,7 +28,7 @@ export const HeroSection = () => {
         <div className="text-center flex flex-col items-center">
           <p className=" text-xl">Hello!</p>
           <div className="max-w-7xl mx-auto">
-            <h1 className="md:text-7xl text-5xl font-bold  space-y-4 mb-8">
+            <h1 className="md:text-7xl text-5xl font-bold space-y-4 mb-8">
               <span>I am </span>
               <span className="text-red-600 border-b-8 border-red-600">
                 Yogi Hafidh,
@@ -48,7 +48,7 @@ export const HeroSection = () => {
       </div>
 
       {/* Hero CTA */}
-      <div className="text-center -mt-28 sm:-mt-32 md:-mt-40">
+      <div className="text-center -mt-28 sm:-mt-32 md:-mt-40 ">
         <div className="relative ">
           <div className="bg-gray-100 border w-max border-gray-300 p-1.5 rounded-full flex justify-center items-center gap-3 absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-10 sm:translate-y-1/2 md:translate-y-32 z-20">
             <button className="w-fit font-semibold border-2 border-gray-500 hover:bg-gray-200 px-3 py-1 md:px-6 md:py-3 rounded-full  cursor-pointer">
@@ -66,12 +66,12 @@ export const HeroSection = () => {
           />
         </div>
 
-        <div className="bg-gray-950 text-white w-full rounded-[32px] py-20 relative z-10 ">
+        <div className="bg-gray-950 text-white w-full  rounded-[32px] py-20 relative z-10 ">
           <div>
             <p className="text-lg mb-2 font-bold">SKILL SET</p>
             <h1 className="text-5xl font-bold mb-20">Services I Provide</h1>
 
-            <div className="flex flex-col md:flex-row gap-10 items-center justify-between px-10">
+            <div className="container flex flex-col md:flex-1 md:flex-row gap-10 items-center justify-between px-10">
               <div className="bg-gray-200/10 rounded-full h-[500px]  backdrop-blur mx-auto p-10">
                 <div className="bg-gray-300/20 p-5 rounded-full size-fit mx-auto mb-10">
                   <FaFigma className="text-8xl text-white" />
