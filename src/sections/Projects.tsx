@@ -8,18 +8,6 @@ import grainImage from "@/assets/images/grain.jpg";
 
 const portfolioProjects = [
   {
-    company: "Koprasi KSP Cihonje",
-    year: "2023",
-    title: "Koprasi System for admin and User",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
-  },
-  {
     company: "Rumah Angsa Glambing",
     year: "2025",
     title: "Glamping Booking System",
@@ -30,6 +18,18 @@ const portfolioProjects = [
     ],
     link: "https://youtu.be/7hi5zwO75yc",
     image: lightSaasLandingPage,
+  },
+  {
+    company: "Koprasi KSP Cihonje",
+    year: "2023",
+    title: "Koprasi System for admin and User",
+    results: [
+      { title: "Enhanced user experience by 40%" },
+      { title: "Improved site speed by 50%" },
+      { title: "Increased mobile traffic by 35%" },
+    ],
+    link: "https://youtu.be/4k7IdSLxh6w",
+    image: darkSaasLandingPage,
   },
   {
     company: "World Wise",
@@ -46,7 +46,7 @@ const portfolioProjects = [
   {
     company: "Forkify Apps",
     year: "2022",
-    title: "Recipes Web Apps (Personal Website)",
+    title: "Recipes Web Apps (Personal Project)",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
