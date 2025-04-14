@@ -9,7 +9,7 @@ export const HeroSection = () => {
   return (
     <div className="relative z-0 overflow-x-clip">
       {/* Background */}
-      <div className="absolute -z-20 inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_1%,black_80%,transparent)]">
+      <div className="absolute -z-20 inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_5%,black_80%,transparent)]">
         <div
           className="absolute inset-0  opacity-5"
           style={{ backgroundImage: `url(${grainImage.src})` }}
@@ -66,13 +66,13 @@ export const HeroSection = () => {
           />
         </div>
 
-        <div className="bg-gray-950 text-white w-full  rounded-[32px] py-20 relative z-10 ">
+        <div className="bg-gray-950 text-white w-full px-10  rounded-[32px] py-20 relative z-10 ">
           <div>
             <p className="text-lg mb-2 font-bold">SKILL SET</p>
             <h1 className="text-5xl font-bold mb-20">Services I Provide</h1>
 
-            <div className="container flex flex-col md:flex-1 md:flex-row gap-10 items-center justify-between px-10">
-              <div className="bg-gray-200/10 rounded-full h-[500px]  backdrop-blur mx-auto p-10">
+            <div className="container flex flex-col md:flex-row gap-6 lg:gap-10 items-center justify-center ">
+              <div className="bg-gray-200/10 rounded-full h-[500px]  backdrop-blur mx-auto w-full p-10">
                 <div className="bg-gray-300/20 p-5 rounded-full size-fit mx-auto mb-10">
                   <FaFigma className="text-8xl text-white" />
                 </div>
@@ -84,7 +84,7 @@ export const HeroSection = () => {
                 </p>
               </div>
 
-              <div className="bg-white rounded-full h-[500px] backdrop-blur mx-auto p-10 text-gray-900">
+              <div className="bg-white rounded-full h-[500px] backdrop-blur mx-auto p-10 w-full text-gray-900">
                 <div className="bg-gray-500/20 p-5 rounded-full size-fit mx-auto mb-10">
                   <FaReact className="text-8xl " />
                 </div>
@@ -98,7 +98,7 @@ export const HeroSection = () => {
                 </p>
               </div>
 
-              <div className="bg-gray-200/10 rounded-full h-[500px] backdrop-blur mx-auto p-10">
+              <div className="bg-gray-200/10 rounded-full h-[500px] backdrop-blur w-full  mx-auto p-10">
                 <div className="bg-gray-300/20 p-5 rounded-full size-fit mx-auto mb-10">
                   <FaGolang className="text-8xl text-white" />
                 </div>

@@ -101,12 +101,19 @@ export const ProjectsSection = () => {
                     </li>
                   ))}
                 </ul>
-                <a href={project.link}>
-                  <button className="mb-8 lg:mb-0 md:mb-12 bg-gray-800 text-white h-12 w-full md:w-auto px-8 rounded-xl font-semibold inline-flex gap-2 items-center justify-center">
-                    <span>Visit Live Site</span>
-                    <ArrowUpRightIcon className="size-5" />
-                  </button>
-                </a>
+                <div className="md:flex gap-6 items-center">
+                  <a href={project.link}>
+                    <button className="mb-6 lg:mb-0 bg-gray-800 text-white h-12 lg:h-16 w-full md:w-auto px-8 rounded-xl font-semibold inline-flex gap-2 items-center justify-center">
+                      <span>Visit Live Site</span>
+                      <ArrowUpRightIcon className="size-5" />
+                    </button>
+                  </a>
+                  <a href={project.link}>
+                    <button className="mb-8 lg:mb-0 md:mb-12 text-gray-800 border border-gray-800 hover:bg-gray-200 h-12 lg:h-16 w-full md:w-auto px-8 rounded-xl font-semibold inline-flex gap-2 items-center justify-center">
+                      <span>Github Repositori</span>
+                    </button>
+                  </a>
+                </div>
               </div>
 
               <div className="relative">
