@@ -7,6 +7,8 @@ import { FaFacebook } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
 import { FaHackerrank } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa6";
+import { FaBehance } from "react-icons/fa6";
+import { FaDribbble } from "react-icons/fa6";
 
 const footerLinks = [
   {
@@ -54,6 +56,16 @@ const footerLinks = [
     href: "https://github.com/Yogihafidh",
     icon: FaGithub,
   },
+  {
+    title: "Behance",
+    href: "https://www.behance.net/yogihafidh",
+    icon: FaBehance,
+  },
+  {
+    title: "Dribbble",
+    href: "https://dribbble.com/Yogihafidh",
+    icon: FaDribbble,
+  },
 ];
 
 export const Footer = () => {
@@ -64,7 +76,7 @@ export const Footer = () => {
 
         <div className="w-full flex flex-col gap-2 md:items-end">
           <p className="mb-2 text-sm md:text-base">My Social Media</p>
-          <nav className="flex gap-4 items-center md:gap-6">
+          <nav className="flex gap-4 items-center md:gap-6 flex-wrap">
             {footerLinks.map((link) => (
               <a key={link.title} href={link.href}>
                 <link.icon className="size-6 hover:text-emerald-400 text-gray-950/70" />
