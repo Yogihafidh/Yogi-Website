@@ -77,17 +77,18 @@ export const HeroSection = () => {
             </h1>
 
             <div className="container flex flex-col md:flex-row gap-6 lg:gap-10 items-center justify-center ">
-              <div className="bg-gray-200/10 rounded-full h-[400px] md:h-[500px]  backdrop-blur mx-auto w-full p-10">
+              <div className="bg-gray-200/10 rounded-full h-[450px] md:h-[500px]  backdrop-blur mx-auto w-full p-10">
                 <div className="bg-gray-300/20 p-5 rounded-full size-fit mx-auto mb-10">
                   <FaFigma className="text-8xl text-white" />
                 </div>
 
                 <h2 className="text-2xl md:text-3xl font-semibold mb-4">
-                  UI UX Design
+                  UI Design
                 </h2>
                 <p className="text-sm md:text-base">
-                  SEO improve website visibility, ranking, and organic trafic
-                  online website visibility ranking
+                  I create clean and user-friendly designs based on
+                  requirements, starting from wireframes to interactive
+                  prototypes for web and mobile apps.
                 </p>
               </div>
 
@@ -100,12 +101,13 @@ export const HeroSection = () => {
                   Frontend Development
                 </h2>
                 <p className="text-sm md:text-base">
-                  SEO improve website visibility, ranking, and organic trafic
-                  online website visibility ranking
+                  I build fast and responsive websites using React and Next.js,
+                  focusing on clean code, performance, and great user
+                  experience.
                 </p>
               </div>
 
-              <div className="bg-gray-200/10 rounded-full h-[450px] md:h-[500px] backdrop-blur w-full  mx-auto p-10">
+              <div className="bg-gray-200/10 rounded-full h-[500px] backdrop-blur w-full  mx-auto p-10">
                 <div className="bg-gray-300/20 p-5 rounded-full size-fit mx-auto mb-10">
                   <FaGolang className="text-8xl text-white" />
                 </div>
@@ -114,8 +116,9 @@ export const HeroSection = () => {
                   Backend Development
                 </h2>
                 <p className="text-sm md:text-base">
-                  SEO improve website visibility, ranking, and organic trafic
-                  online website visibility ranking
+                  I develop reliable and scalable server-side applications using
+                  Go (Golang), focusing on performance, security, and clean
+                  architecture. (COOMING SOON)
                 </p>
               </div>
             </div>
