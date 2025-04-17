@@ -4,7 +4,6 @@ import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
-import grainImage from "@/assets/images/grain.jpg";
 import { SectionHeader } from "@/components/SeactionHeader";
 import { Card } from "@/components/Card";
 
@@ -104,7 +103,7 @@ export const ProjectsSection = () => {
                     </button>
                   </a>
                   <a href={project.link}>
-                    <button className="mb-8 lg:mb-0 md:mb-12 text-gray-800 border border-gray-800 hover:bg-gray-200 h-12 lg:h-16 w-full md:w-auto px-8 rounded-xl font-semibold inline-flex gap-2 items-center justify-center">
+                    <button className="mb-8 lg:mb-0 md:mb-12 text-gray-800 border border-gray-800 hover:bg-gray-200 h-12 lg:h-16 w-full md:w-auto px-4 rounded-xl font-semibold inline-flex gap-2 items-center justify-center">
                       <span>Github Repositori</span>
                     </button>
                   </a>

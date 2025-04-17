@@ -4,6 +4,7 @@ import grainImage from "@/assets/images/grain.jpg";
 import { FaReact } from "react-icons/fa";
 import { FaFigma } from "react-icons/fa";
 import { FaGolang } from "react-icons/fa6";
+import { SectionHeader } from "@/components/SeactionHeader";
 
 export const HeroSection = () => {
   return (
@@ -68,45 +69,51 @@ export const HeroSection = () => {
 
         <div className="bg-gray-950 text-white w-full px-10  rounded-[32px] py-20 relative z-10 ">
           <div>
-            <p className="text-lg mb-2 font-bold">SKILL SET</p>
-            <h1 className="text-5xl font-bold mb-20">Services I Provide</h1>
+            <p className="uppercase font-semibold text-sm tracking-widest md:mb-4">
+              SKILL SET
+            </p>
+            <h1 className="font-serif text-3xl md:text-5xl mb-8 md:h-24">
+              Services I Provide
+            </h1>
 
             <div className="container flex flex-col md:flex-row gap-6 lg:gap-10 items-center justify-center ">
-              <div className="bg-gray-200/10 rounded-full h-[500px]  backdrop-blur mx-auto w-full p-10">
+              <div className="bg-gray-200/10 rounded-full h-[400px] md:h-[500px]  backdrop-blur mx-auto w-full p-10">
                 <div className="bg-gray-300/20 p-5 rounded-full size-fit mx-auto mb-10">
                   <FaFigma className="text-8xl text-white" />
                 </div>
 
-                <h2 className="text-3xl font-semibold mb-3">UI UX Design</h2>
-                <p>
+                <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+                  UI UX Design
+                </h2>
+                <p className="text-sm md:text-base">
                   SEO improve website visibility, ranking, and organic trafic
                   online website visibility ranking
                 </p>
               </div>
 
-              <div className="bg-white rounded-full h-[500px] backdrop-blur mx-auto p-10 w-full text-gray-900">
+              <div className="bg-white rounded-full h-[450px] md:h-[500px] backdrop-blur mx-auto p-10 w-full text-gray-900">
                 <div className="bg-gray-500/20 p-5 rounded-full size-fit mx-auto mb-10">
                   <FaReact className="text-8xl " />
                 </div>
 
-                <h2 className="text-3xl font-semibold mb-3">
+                <h2 className="text-2xl md:text-3xl font-semibold mb-4">
                   Frontend Development
                 </h2>
-                <p>
+                <p className="text-sm md:text-base">
                   SEO improve website visibility, ranking, and organic trafic
                   online website visibility ranking
                 </p>
               </div>
 
-              <div className="bg-gray-200/10 rounded-full h-[500px] backdrop-blur w-full  mx-auto p-10">
+              <div className="bg-gray-200/10 rounded-full h-[450px] md:h-[500px] backdrop-blur w-full  mx-auto p-10">
                 <div className="bg-gray-300/20 p-5 rounded-full size-fit mx-auto mb-10">
                   <FaGolang className="text-8xl text-white" />
                 </div>
 
-                <h2 className="text-3xl font-semibold mb-3">
+                <h2 className="text-2xl md:text-3xl font-semibold mb-4">
                   Backend Development
                 </h2>
-                <p>
+                <p className="text-sm md:text-base">
                   SEO improve website visibility, ranking, and organic trafic
                   online website visibility ranking
                 </p>

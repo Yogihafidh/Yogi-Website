@@ -29,6 +29,6 @@ const testimonials = [
   },
 ];
 
-export const TestimonialsSection = () => {
+export const ExperiencesSection = () => {
   return <div>Testimonials Section</div>;
 };
