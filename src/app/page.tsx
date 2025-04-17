@@ -15,6 +15,7 @@ export default function Home() {
       <ProjectsSection />
       <TapeSection />
       <ExperiencesSection />
+      <TapeSection />
       <AboutSection />
       <ContactSection />
       <Footer />

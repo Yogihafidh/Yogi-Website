@@ -67,7 +67,7 @@ export const Footer = () => {
           <nav className="flex gap-4 items-center md:gap-6">
             {footerLinks.map((link) => (
               <a key={link.title} href={link.href}>
-                <link.icon className="size-6 hover:text-emerald-400" />
+                <link.icon className="size-6 hover:text-emerald-400 text-gray-950/70" />
               </a>
             ))}
           </nav>
