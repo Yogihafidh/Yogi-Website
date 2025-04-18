@@ -52,12 +52,16 @@ export const HeroSection = () => {
       <div className="text-center -mt-28 sm:-mt-32 md:-mt-40 ">
         <div className="relative ">
           <div className="bg-gray-100 border w-max border-gray-300 p-1.5 rounded-full flex justify-center items-center gap-3 absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-10 sm:translate-y-1/2 md:translate-y-32 z-20">
-            <button className="w-fit font-semibold border-2 border-gray-500 hover:bg-gray-200 px-3 py-1 md:px-6 md:py-3 rounded-full  cursor-pointer">
-              Explore My Project
-            </button>
-            <button className="w-fit border border-gray-500 bg-gray-950 hover:bg-gray-700 text-white px-3 py-1 md:px-6 md:py-3 rounded-full cursor-pointer">
-              Lets Connect
-            </button>
+            <a href="https://github.com/Yogihafidh">
+              <button className="w-fit font-semibold border-2 border-gray-500 hover:bg-gray-200 px-3 py-1 md:px-6 md:py-3 rounded-full  cursor-pointer">
+                Explore all my Project
+              </button>
+            </a>
+            <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">
+              <button className="w-fit border border-gray-500 bg-gray-950 hover:bg-gray-700 text-white px-3 py-1 md:px-6 md:py-3 rounded-full cursor-pointer">
+                Lets Connect
+              </button>
+            </a>
           </div>
 
           <Image
