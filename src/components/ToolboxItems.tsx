@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { twMerge } from "tailwind-merge";
 
 type ToolboxProps = {
@@ -23,13 +24,17 @@ export const ToolboxItems = ({
           itemsWrapperClassName
         )}
       >
-        {items.map((tool) => (
-          <div
-            key={tool}
-            className="py-2 px-4 outline outline-2 outline-gray-400/50 rounded-lg"
-          >
-            {tool}
-          </div>
+        {[...new Array(2)].fill(0).map((_, idx) => (
+          <Fragment key={idx}>
+            {items.map((tool) => (
+              <div
+                key={tool}
+                className="py-2 px-4 outline outline-2 outline-gray-400/50 rounded-lg"
+              >
+                {tool}
+              </div>
+            ))}
+          </Fragment>
         ))}
       </div>
     </div>

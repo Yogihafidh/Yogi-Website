@@ -148,15 +148,26 @@ export const ProjectsSection = () => {
       />
 
       <div className="flex flex-col text-left">
-        {portfolioProjects.map((project) => (
-          <ProjectCard project={project} key={project.title} />
+        {portfolioProjects.map((project, projectIndex) => (
+          <ProjectCard
+            project={project}
+            projectIndex={projectIndex}
+            key={project.title}
+          />
         ))}
       </div>
-      <a href="https://github.com/Yogihafidh">
-        <button className="w-fit font-semibold border-2 border-gray-300 hover:bg-gray-200 px-6 py-3 rounded-full  cursor-pointer">
-          See all my Project
-        </button>
-      </a>
+      <div className="flex justify-center items-center gap-3">
+        <a href="https://github.com/Yogihafidh">
+          <button className="w-fit font-semibold bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-950 px-3 md:px-6 py-2 md:py-3 rounded-full  cursor-pointer">
+            See all my Project
+          </button>
+        </a>
+        <a href="https://www.behance.net/yogihafidh">
+          <button className="w-fit font-semibold border-2 border-gray-300 hover:bg-gray-200 px-3 md:px-6 py-2 md:py-3 rounded-full  cursor-pointer">
+            See all my design
+          </button>
+        </a>
+      </div>
     </section>
   );
 };

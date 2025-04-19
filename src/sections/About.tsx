@@ -4,9 +4,9 @@ import Image from "next/image";
 
 import MapImage from "@/assets/images/map.png";
 import Memoji from "@/assets/images/memoji-computer.png";
-import StartIcon from "@/assets/icons/star.svg";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
+import { DragCard } from "@/components/DragCard";
 
 const fronendToolbox = [
   "React.JS",
@@ -36,6 +36,7 @@ const hobby = [
   { title: "Haiking 🏞️", left: "15%", top: "10%" },
   { title: "Watching K-Drama 📺", left: "10%", top: "40%" },
   { title: "Badminton 🏸", left: "30%", top: "70%" },
+  { title: "Ngrumpi & Nggosip 🤷‍♂️", left: "60%", top: "25%" },
 ];
 
 export const AboutSection = () => {
@@ -53,15 +54,19 @@ export const AboutSection = () => {
             title="Front-end Toolbox"
             description="Explore the technologies and tools I use to build interfaces website"
           />
-          <ToolboxItems items={fronendToolbox} className="mb-6" />
           <ToolboxItems
             items={fronendToolbox}
             className="mb-6"
-            itemsWrapperClassName="-translate-x-1/2"
+            itemsWrapperClassName="animate-move-left [animation-duration:30s]"
           />
           <ToolboxItems
             items={fronendToolbox}
-            itemsWrapperClassName="-translate-x-1/4"
+            className="mb-6 "
+            itemsWrapperClassName="-translate-x-1/2 animate-move-right [animation-duration:20s]"
+          />
+          <ToolboxItems
+            items={fronendToolbox}
+            itemsWrapperClassName="-translate-x-1/4 animate-move-left [animation-duration:40s]"
           />
         </Card>
 
@@ -70,16 +75,20 @@ export const AboutSection = () => {
             title="Back-end Toolbox"
             description="Explore the technologies and tools I use to build web server"
           />
-          <ToolboxItems items={backendToolbox} className="mb-6" />
           <ToolboxItems
             items={backendToolbox}
             className="mb-6"
-            itemsWrapperClassName="-translate-x-1/2"
+            itemsWrapperClassName="-translate-x-1/2 animate-move-right [animation-duration:40s]"
           />
           <ToolboxItems
             items={backendToolbox}
             className="mb-6"
-            itemsWrapperClassName="translate-x-1/4"
+            itemsWrapperClassName="-translate-x-1/2 animate-move-left [animation-duration:15s]"
+          />
+          <ToolboxItems
+            items={backendToolbox}
+            className="mb-6"
+            itemsWrapperClassName="translate-x-1/4 animate-move-right [animation-duration:20s]"
           />
         </Card>
 
@@ -90,7 +99,9 @@ export const AboutSection = () => {
             alt="Purwokerto"
             fill
           />
-          <div className="absolute top-1/2 right-3/4 translate-x-3/4 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 flex items-center justify-center after:content-[''] after:absolute after:-z-10 after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-100">
+          <div className="absolute top-1/2 right-3/4 translate-x-3/4 -translate-y-1/2 size-20 rounded-full flex items-center justify-center after:content-[''] after:absolute after:-z-10 after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-100">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping-large [animation-duration:2s]"></div>
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-10"></div>
             <Image className="size-20" src={Memoji} alt="Yogi Memoji" />
           </div>
         </Card>
@@ -100,20 +111,7 @@ export const AboutSection = () => {
             title="My Hobby"
             description="Explore my interests and hobbies"
           />
-          <div className="relative flex-1">
-            {hobby.map((item) => (
-              <div
-                key={item.title}
-                className=" inline-flex gap-2 px-6 py-1.5 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full font-medium absolute"
-                style={{
-                  left: item.left,
-                  top: item.top,
-                }}
-              >
-                {item.title}
-              </div>
-            ))}
-          </div>
+          <DragCard hobby={hobby} />
         </Card>
       </div>
     </div>

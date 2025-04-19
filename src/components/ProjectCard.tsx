@@ -26,15 +26,19 @@ type Project = {
 
 type ProjectCardProps = {
   project: Project;
+  projectIndex: number;
 };
 
-export const ProjectCard = ({ project }: ProjectCardProps) => {
+export const ProjectCard = ({ project, projectIndex }: ProjectCardProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Card
       key={project.title}
-      className="px-8 pt-8 pb-0 mb-20 md:px-10 md:pt-12 lg:pt-16 lg:px-20"
+      className="px-8 pt-8 pb-0 mb-20 md:px-10 md:pt-12 lg:pt-16 lg:px-20 sticky top-16"
+      style={{
+        top: `calc(64px + ${projectIndex * 60}px)`,
+      }}
     >
       <div className="lg:grid lg:grid-cols-2 lg:gap-16">
         <div className="lg:pb-16">
