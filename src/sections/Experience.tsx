@@ -86,7 +86,9 @@ export const ExperiencesSection = () => {
           {experiencesList.map((experience) => (
             <div key={experience.name} className="flex gap-4 md:gap-8 ">
               <div className=" flex flex-col items-center translate-y-2 ">
-                <div className="size-3 md:size-4 rounded-full bg-gray-400"></div>
+                <div className="size-3 md:size-4 rounded-full bg-gray-400/50 relative">
+                  <div className="bg-gray-400 absolute inset-0 animate-ping-large duration-1000 rounded-full"></div>
+                </div>
                 <span className="border-l border-gray-200 h-full"></span>
               </div>
 
@@ -117,7 +119,9 @@ export const ExperiencesSection = () => {
           {EducationList.map((education) => (
             <div key={education.school} className="flex gap-4 md:gap-8 ">
               <div className=" flex flex-col items-center translate-y-2 ">
-                <div className="size-3 md:size-4 rounded-full bg-gray-400"></div>
+                <div className="size-3 md:size-4 rounded-full bg-gray-400/50 relative">
+                  <div className="bg-gray-400 absolute inset-0 animate-ping-large duration-1000 rounded-full"></div>
+                </div>
                 <span className="border-l border-gray-200 h-full"></span>
               </div>
 

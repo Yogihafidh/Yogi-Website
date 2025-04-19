@@ -1,9 +1,8 @@
 import rumahAngsa from "@/assets/images/rumah-angsa.png";
 import forkifyApp from "@/assets/images/forkify-app.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
+import koprasiKspCihonje from "@/assets/images/koprasi-KSP.png";
 import { SectionHeader } from "@/components/SeactionHeader";
 import { ProjectCard } from "@/components/ProjectCard";
-import { title } from "process";
 
 const portfolioProjects = [
   {
@@ -55,7 +54,7 @@ const portfolioProjects = [
         github: "https://github.com/Yogihafidh/rumah-angsa-website.git",
       },
       {
-        title: "Rumah Angsa Admin Website",
+        title: "Rumah Angsa Admin Website (Desktop Only)",
         url: "https://the-wild-oasis-yogi.netlify.app/login",
         github: "https://github.com/Yogihafidh/rumah-angsa-admin.git",
       },
@@ -97,7 +96,7 @@ const portfolioProjects = [
         github: "https://github.com/Yogihafidh/Koperasi-Primkoppabri-.git",
       },
     ],
-    image: forkifyApp,
+    image: koprasiKspCihonje,
   },
   {
     company: "Forkify Apps",
@@ -153,6 +152,11 @@ export const ProjectsSection = () => {
           <ProjectCard project={project} key={project.title} />
         ))}
       </div>
+      <a href="https://github.com/Yogihafidh">
+        <button className="w-fit font-semibold border-2 border-gray-300 hover:bg-gray-200 px-6 py-3 rounded-full  cursor-pointer">
+          See all my Project
+        </button>
+      </a>
     </section>
   );
 };
