@@ -1,4 +1,5 @@
 import grainImage from "@/assets/images/grain.jpg";
+import FormContact from "@/components/FormContact";
 
 export const ContactSection = () => {
   return (
@@ -15,31 +16,7 @@ export const ContactSection = () => {
           </p>
         </div>
 
-        <form className="flex flex-col gap-4">
-          <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-8">
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="border border-gray-100 rounded-xl px-8 py-4 w-full"
-              required
-            />
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="border border-gray-100 rounded-xl px-8 py-4 w-full"
-              required
-            />
-          </div>
-          <textarea
-            placeholder="Your Message"
-            className="border border-gray-100 rounded-xl px-8 py-4 mb-4 md:mb-8 md:h-48"
-          ></textarea>
-          <div>
-            <button className=" bg-gray-900 hover:bg-gray-700 text-white px-8 py-4 w-full md:w-auto  rounded-xl font-semibold ">
-              Contact me now!
-            </button>
-          </div>
-        </form>
+        <FormContact />
       </div>
     </div>
   );
