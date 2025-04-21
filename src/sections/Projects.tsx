@@ -140,7 +140,7 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
   return (
-    <section className="container text-center pt-28 md:pt-40">
+    <section id="project" className="container text-center pt-28 md:pt-40">
       <SectionHeader
         eyebrow="Apps Result"
         title="Featured Project"
