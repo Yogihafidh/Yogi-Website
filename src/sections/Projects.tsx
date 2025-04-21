@@ -129,7 +129,7 @@ const portfolioProjects = [
     ],
     link: [
       {
-        title: "Forkify Recipe App",
+        title: "Forkify Recipe App (Desktop Only)",
         url: "https://forkifyapps-v2.netlify.app/",
         github: "https://github.com/Yogihafidh/Forkify-Apps.git",
       },

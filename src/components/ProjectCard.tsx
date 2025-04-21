@@ -73,7 +73,7 @@ export const ProjectCard = ({ project, projectIndex }: ProjectCardProps) => {
         createPortal(
           <>
             <Overlay setIsOpen={setIsOpen} />
-            <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-3xl shadow-lg p-8 md:p-16  transition-all z-[90] w-3/4 h-3/4  overflow-x-auto">
+            <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-3xl shadow-lg p-8 md:p-16  transition-all z-[90] w-3/4 h-4/5  overflow-x-auto">
               <IoMdClose
                 onClick={() => setIsOpen(false)}
                 className="absolute top-5 right-5 size-8 md:top-10 md:right-10 md:size-10 cursor-pointer hover:text-red-500"
