@@ -53,7 +53,10 @@ const EducationList = [
 export const ExperiencesSection = () => {
   const [activeTab, setActiveTab] = useState("experience");
   return (
-    <div className="container text-center py-12 md:py-24 lg:py-32 ">
+    <div
+      id="experience"
+      className="container text-center py-12 md:py-24 lg:py-32 "
+    >
       <SectionHeader
         title="Experience and Education"
         eyebrow="My Personel Journey"

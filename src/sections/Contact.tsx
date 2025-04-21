@@ -3,7 +3,7 @@ import FormContact from "@/components/FormContact";
 
 export const ContactSection = () => {
   return (
-    <div className="container py-16 pt-8 ">
+    <section id="contact" className="container py-16 pt-8 ">
       <div className="bg-gradient-to-r from-emerald-300 to-sky-400 rounded-3xl px-8 md:px-16 py-8 flex flex-col gap-8">
         <div>
           <h2 className="text-2xl md:text-3xl font-serif mb-4">
@@ -18,6 +18,6 @@ export const ContactSection = () => {
 
         <FormContact />
       </div>
-    </div>
+    </section>
   );
 };

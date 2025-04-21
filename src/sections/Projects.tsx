@@ -129,7 +129,7 @@ const portfolioProjects = [
     ],
     link: [
       {
-        title: "Forkify Recipe App",
+        title: "Forkify Recipe App (Desktop Only)",
         url: "https://forkifyapps-v2.netlify.app/",
         github: "https://github.com/Yogihafidh/Forkify-Apps.git",
       },
@@ -140,7 +140,7 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
   return (
-    <section className="container text-center pt-28 md:pt-40">
+    <section id="project" className="container text-center pt-28 md:pt-40">
       <SectionHeader
         eyebrow="Apps Result"
         title="Featured Project"
