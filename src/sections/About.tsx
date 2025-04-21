@@ -41,7 +41,7 @@ const hobby = [
 
 export const AboutSection = () => {
   return (
-    <div className="container text-center py-12 md:py-24 lg:py-32">
+    <section id="about" className="container text-center py-12 md:py-24 lg:py-32">
       <SectionHeader
         eyebrow="let's get to know me at work"
         title="About Yogi"
@@ -114,6 +114,6 @@ export const AboutSection = () => {
           <DragCard hobby={hobby} />
         </Card>
       </div>
-    </div>
+    </section>
   );
 };
