@@ -55,7 +55,7 @@ const portfolioProjects = [
       },
       {
         title: "Rumah Angsa Admin Website (Desktop Only)",
-        url: "https://the-wild-oasis-yogi.netlify.app/login",
+        url: "https://the-wild-oasis-31li.vercel.app/login",
         github: "https://github.com/Yogihafidh/rumah-angsa-admin.git",
       },
     ],
