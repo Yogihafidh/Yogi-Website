@@ -1,4 +1,4 @@
-# Yogi-Website
+# About
 My first personal portofolio web. I am built with Next.JS and Tailwind.css.
 
 # Documentation
