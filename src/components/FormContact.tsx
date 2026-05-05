@@ -34,7 +34,7 @@ const FormContact = () => {
           type="submit"
           className="bg-gray-900 hover:bg-gray-700 text-white px-8 py-4 w-full md:w-auto rounded-xl font-semibold"
         >
-          Contact me now!
+          Start a Conversation!
         </button>
       </div>
     </form>

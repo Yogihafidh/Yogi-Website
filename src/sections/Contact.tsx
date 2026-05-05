@@ -3,16 +3,24 @@ import FormContact from "@/components/FormContact";
 
 export const ContactSection = () => {
   return (
-    <section id="contact" className="container py-16 pt-8 ">
+    <section id="contact" className="container section-rhythm pt-10 md:pt-12">
       <div className="bg-gradient-to-r from-emerald-300 to-sky-400 rounded-3xl px-8 md:px-16 py-8 flex flex-col gap-8">
         <div>
+          <p className="uppercase text-xs tracking-[0.2em] font-semibold mb-3">
+            Contact / Hire Me
+          </p>
           <h2 className="text-2xl md:text-3xl font-serif mb-4">
-            Lets realize that idea together
+            Let’s Turn Your Ideas Into Reliable Systems
           </h2>
           <p className="text-sm md:text-base md:mb-8">
-            Are you ready to bring your project ideas to life? Lets connect and
-            discuss how I can help you realize the project ideas in your head.
-            Contact me by filling out the form below!
+            I help transform real-world problems into scalable and reliable
+            systems. Whether you're building a new product or improving an
+            existing one, I can contribute through system design, backend
+            development, and fullstack implementation.
+          </p>
+          <p className="text-sm md:text-base">
+            Available for full-time roles, freelance projects, and
+            collaboration.
           </p>
         </div>
 
