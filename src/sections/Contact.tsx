@@ -14,7 +14,7 @@ export const ContactSection = () => {
           </h2>
           <p className="text-sm md:text-base md:mb-8">
             I help transform real-world problems into scalable and reliable
-            systems. Whether you're building a new product or improving an
+            systems. Whether you&apos;re building a new product or improving an
             existing one, I can contribute through system design, backend
             development, and fullstack implementation.
           </p>
