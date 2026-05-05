@@ -8,59 +8,134 @@ import { useState } from "react";
 
 const experiencesList = [
   {
-    name: "KSP Cihonje Koprasi System Project",
-    position: "Full-Stack Developer",
-    text: "In this 4th semester project, I was responsible for designing and developing the system as a whole, starting from creating a Software Requirements Specification (SRS) document to define system requirements, to designing and implementing a database using MySQL and creating an Entity Relationship Diagram (ERD). I also developed the user interface based on Figma's design using HTML, CSS, and JavaScript, and implemented CRUD features for user and transaction data. In addition, I ensured that the application is responsive and compatible across devices through the use of media queries.",
-    techStack: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    name: "Telkom Indonesia",
+    position: "Frontend Developer Intern",
+    period: "Aug 2025 – Dec 2025 · On-site",
+    text: "Contributed to the development and modernization of an internal chatbot platform used by 50+ administrative users, focusing on scalability, performance, and usability.",
+
+    contributions: [
+      "Implemented ACL-based dynamic sidebar for scalable role-based access across 50+ users",
+      "Led migration from Nuxt 2 to Nuxt 3 to improve performance and maintainability",
+      "Developed a visual dialog flow editor using Vue Flow for non-technical users",
+      "Implemented Multi-Factor Authentication (MFA) and secure logout mechanisms",
+      "Optimized performance using lazy loading and pagination strategies",
+    ],
+
+    techStack: ["Vue.js", "Nuxt 3", "TypeScript", "Tailwind CSS", "Vue Flow"],
     Image: "",
   },
+
   {
-    name: "Rumah Angsa booking system",
-    position: "Full-Stack Developer",
-    text: "In this Software Construction course project, I was responsible as a full-stack developer, building application systems for both users and admins. I used Supabase for the backend, React.js for the admin dashboard to manage glamping bookings, and Next.js for the user-facing frontend where users can make reservations.",
+    name: "PT Cazh Teknologi Inovasi",
+    position: "Fullstack Developer Intern",
+    period: "Jul 2025 – Sep 2025 · On-site",
+    text: "Developed a vehicle rental management platform with a dual-interface system (admin dashboard and user booking application), focusing on usability and operational efficiency.",
+
+    contributions: [
+      "Designed and implemented a full vehicle rental system with admin and user interfaces",
+      "Built responsive frontend using Next.js and React for improved user experience",
+      "Implemented backend services using Supabase with centralized data management",
+      "Integrated booking flow with WhatsApp to align with existing business processes",
+      "Created system and API documentation to support development and collaboration",
+    ],
+
     techStack: [
-      "React.JS",
-      "Next.JS",
+      "Next.js",
+      "React",
       "Tailwind CSS",
-      "React Router",
-      "TanStack Query",
       "Supabase",
+      "PostgreSQL",
+      "TypeScript",
     ],
     Image: "",
   },
+
   {
-    name: "Airfly - Airline Booking System",
-    position: "Backend Developer",
-    text: "In this Binar Academy Independent Study project, I was responsible as a backend developer, building the backend application for the airline module using Express.js and PostgreSQL as the tech stack.",
-    techStack: ["Node.js", "Express.js", "PostgreSQL"],
+    name: "Binar Academy",
+    position: "Backend Developer Student (MSIB)",
+    period: "Sep 2024 – Jan 2025 · Remote",
+    text: "Developed backend services for an airline booking system, focusing on RESTful API design, database structure, and system reliability.",
+
+    contributions: [
+      "Designed and implemented RESTful APIs for airline booking workflows",
+      "Built PostgreSQL database schema supporting transactional operations",
+      "Documented APIs using Swagger/OpenAPI for better collaboration",
+      "Implemented authentication and authorization mechanisms",
+      "Collaborated with frontend team to define API contracts",
+    ],
+
+    techStack: ["Node.js", "Express.js", "PostgreSQL", "REST API", "JWT"],
+    Image: "",
+  },
+
+  {
+    name: "HMSE Telkom University Purwokerto",
+    position: "Treasurer",
+    period: "2023 – 2024 · On-site",
+    text: "Managed financial planning and reporting for a student organization with 50+ members, ensuring transparency and structured financial tracking.",
+
+    contributions: [
+      "Managed budgeting and financial planning for multiple programs",
+      "Developed Excel-based financial tracking system to improve reporting accuracy",
+      "Prepared monthly financial reports for stakeholders",
+      "Coordinated financial operations across organizational activities",
+      "Maintained structured financial documentation for accountability",
+    ],
+
+    techStack: [
+      "Financial Management",
+      "Budget Planning",
+      "MS Excel",
+      "Reporting",
+    ],
     Image: "",
   },
 ];
 
 const EducationList = [
   {
-    school: "SMAN 1 Bawang",
-    position: "MIPA",
-    year: "2018 - 2021",
-  },
-  {
     school: "Telkom University",
     position: "S1 Software Engineering",
-    year: "2022 - 2026",
+    year: "Oct 2022 – Jul 2026",
+    gpa: "3.91",
+    track: "Web Development",
+    activities: "Software Engineering Student Association (HMSE) as Treasurer",
+    description:
+      "Graduated with a strong foundation in software engineering, focusing on web development, system design, and backend architecture.",
+
+    relevantCourses: [
+      "Software Engineering",
+      "Software Requirements Engineering",
+      "Software Design and Architecture",
+      "Software Construction",
+      "Software Testing",
+      "Software Quality Assurance",
+      "Database Systems",
+      "Data Structures",
+      "Operating Systems",
+      "Web Development",
+      "User Experience (UX)",
+      "Design Thinking",
+      "Interaction Design",
+    ],
+  },
+
+  {
+    school: "SMA Negeri 1 Bawang",
+    position: "MIPA",
+    year: "Jul 2018 – May 2021",
+    activities: "Majelis Perwakilan Kelas (MPK)",
   },
 ];
 
 export const ExperiencesSection = () => {
   const [activeTab, setActiveTab] = useState("experience");
   return (
-    <div
-      id="experience"
-      className="container text-center py-12 md:py-24 lg:py-32 "
-    >
+    <div id="experience" className="container text-center section-rhythm">
       <SectionHeader
-        title="Experience and Education"
-        eyebrow="My Personel Journey"
-        description="See more about my experience and education"
+        title="Experience"
+        eyebrow="Professional Proof"
+        description="Professional track record and education that validate execution quality"
       />
 
       <div className="flex gap-8 justify-center mb-16">
@@ -96,21 +171,48 @@ export const ExperiencesSection = () => {
               </div>
 
               <div className="pb-16">
-                <h4 className="text-lg font-serif">{experience.name}</h4>
-                <p className="text-sm text-gray-800/70 mb-4">
-                  {experience.position}
+                <div className="mb-2">
+                  <h4 className="text-lg font-serif">{experience.position}</h4>
+                  <p className="text-sm font-semibold text-gray-800/70 mb-1">
+                    {experience.name} · {experience.period}
+                  </p>
+                </div>
+                <p className="text-sm md:text-base mb-4 leading-relaxed text-gray-700">
+                  {experience.text}
                 </p>
-                <p className="text-sm md:text-base mb-4">{experience.text}</p>
-                <p className="inline-flex gap-4 flex-wrap">
-                  {experience.techStack.map((stack) => (
-                    <span
-                      className="px-2 py-1 bg-gray-100 border border-gray-200 rounded-2xl text-xs md:text-sm"
-                      key={stack}
-                    >
-                      {stack}
-                    </span>
-                  ))}
-                </p>
+                {experience.contributions && (
+                  <div className="mb-4">
+                    <p className="text-xs font-semibold uppercase tracking-widest text-gray-600 mb-3">
+                      Key Contributions
+                    </p>
+                    <ul className="space-y-2">
+                      {experience.contributions.map((contrib) => (
+                        <li
+                          key={contrib}
+                          className="text-sm text-gray-700 flex gap-3"
+                        >
+                          <span className="text-emerald-500 font-bold">•</span>
+                          <span>{contrib}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-widest text-gray-600 mb-2">
+                    Tech Stack
+                  </p>
+                  <p className="inline-flex gap-4 flex-wrap">
+                    {experience.techStack.map((stack) => (
+                      <span
+                        className="px-2 py-1 bg-gray-100 border border-gray-200 rounded-2xl text-xs md:text-sm"
+                        key={stack}
+                      >
+                        {stack}
+                      </span>
+                    ))}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
@@ -120,7 +222,7 @@ export const ExperiencesSection = () => {
       {activeTab === "education" && (
         <div className="flex flex-col text-left ">
           {EducationList.map((education) => (
-            <div key={education.school} className="flex gap-4 md:gap-8 ">
+            <div key={education.school} className="flex gap-4 md:gap-8">
               <div className=" flex flex-col items-center translate-y-2 ">
                 <div className="size-3 md:size-4 rounded-full bg-gray-400/50 relative">
                   <div className="bg-gray-400 absolute inset-0 animate-ping-large duration-1000 rounded-full"></div>
@@ -128,15 +230,62 @@ export const ExperiencesSection = () => {
                 <span className="border-l border-gray-200 h-full"></span>
               </div>
 
-              <div>
+              <div className="flex-1 pb-16">
                 <h4 className="text-lg font-serif">{education.school}</h4>
-                <p className="text-sm text-gray-800/70 mb-2">
+                <p className="text-sm font-semibold text-gray-800/70 mb-2">
                   {education.position}
                 </p>
-                <p className="text-sm flex gap-2 items-center pb-8">
+                <p className="text-sm flex gap-2 items-center mb-3">
                   <FaRegCalendarAlt className="text-gray-800/70" />
                   <span className="text-gray-800/70">{education.year}</span>
                 </p>
+
+                {education.gpa && (
+                  <div className="mb-3">
+                    <p className="text-xs font-semibold uppercase tracking-widest text-gray-600 mb-1">
+                      GPA
+                    </p>
+                    <p className="text-sm text-gray-700">{education.gpa}</p>
+                  </div>
+                )}
+
+                {education.track && (
+                  <div className="mb-3">
+                    <p className="text-xs font-semibold uppercase tracking-widest text-gray-600 mb-1">
+                      Discipline Track
+                    </p>
+                    <p className="text-sm text-gray-700">{education.track}</p>
+                  </div>
+                )}
+
+                {education.activities && (
+                  <div className="mb-3">
+                    <p className="text-xs font-semibold uppercase tracking-widest text-gray-600 mb-1">
+                      Activities & Organizations
+                    </p>
+                    <p className="text-sm text-gray-700">
+                      {education.activities}
+                    </p>
+                  </div>
+                )}
+
+                {education.relevantCourses && (
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-widest text-gray-600 mb-2">
+                      Relevant Courses
+                    </p>
+                    <div className="inline-flex gap-2 flex-wrap">
+                      {education.relevantCourses.map((skill) => (
+                        <span
+                          className="px-2 py-1 bg-gray-100 border border-gray-200 rounded-2xl text-xs"
+                          key={skill}
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}

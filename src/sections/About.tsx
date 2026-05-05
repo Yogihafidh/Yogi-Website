@@ -41,18 +41,79 @@ const hobby = [
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="container text-center py-12 md:py-24 lg:py-32">
+    <section
+      id="about"
+      className="container text-center py-12 md:py-24 lg:py-32"
+    >
       <SectionHeader
         eyebrow="let's get to know me at work"
         title="About Yogi"
-        description="learn more about who I am, what I do, where I am, and what tools I use."
+        description="Software Engineer focused on system design, backend development, and building scalable solutions from real-world problems."
       />
+
+      <div className="grid md:grid-cols-[2fr_1fr] gap-10 items-center mb-20">
+        {/* LEFT SIDE */}
+        <div className="text-left">
+          <h3 className="text-3xl md:text-4xl font-semibold leading-tight mb-6">
+            Building Scalable Systems from Real-World Problems
+          </h3>
+
+          <p className="text-gray-600 leading-relaxed mb-4">
+            I am a Software Engineer with a strong foundation in system design
+            and backend development, focused on transforming real-world problems
+            into structured and scalable systems.
+          </p>
+
+          <p className="text-gray-600 leading-relaxed mb-4">
+            My approach starts from understanding business workflows and
+            translating them into clear requirements, followed by designing
+            system architecture using principles such as modular design, clean
+            architecture, and efficient data modeling.
+          </p>
+
+          <p className="text-gray-600 leading-relaxed mb-4">
+            I have experience building financial systems and operational
+            platforms, where I applied API design, authentication, and
+            performance optimization to deliver reliable and maintainable
+            solutions.
+          </p>
+
+          <p className="text-gray-600 leading-relaxed mb-6">
+            Beyond implementation, I value clarity in thinking—ensuring that
+            every system I build is not only functional, but also aligned with
+            user needs and business goals.
+          </p>
+
+          <p className="italic text-gray-500">
+            I don’t just build applications—I design systems that solve real
+            problems.
+          </p>
+        </div>
+
+        {/* RIGHT SIDE */}
+        <div className="bg-gradient-to-br from-emerald-50 to-sky-50 rounded-2xl p-6 shadow-sm border border-white/40 backdrop-blur-sm">
+          <p className="text-sm uppercase tracking-wide text-gray-500 mb-4">
+            What I Focus On
+          </p>
+
+          <div className="space-y-3">
+            {["System Design", "Backend Development", "Full-stack Development", "Product Thinking"].map(
+              (item) => (
+                <div key={item} className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
+                  <span className="text-gray-700">{item}</span>
+                </div>
+              ),
+            )}
+          </div>
+        </div>
+      </div>
 
       <div className="flex flex-col gap-6 md:grid md:grid-cols-5 md:gap-6">
         <Card className="p-0 h-[360px] md:col-span-3">
           <CardHeader
             title="Front-end Toolbox"
-            description="Explore the technologies and tools I use to build interfaces website"
+            description="Tools and technologies I use to build responsive and user-friendly interfaces."
           />
           <ToolboxItems
             items={fronendToolbox}
@@ -73,7 +134,7 @@ export const AboutSection = () => {
         <Card className="p-0 h-[360px] md:col-span-2">
           <CardHeader
             title="Back-end Toolbox"
-            description="Explore the technologies and tools I use to build web server"
+            description="Technologies I use to build scalable and reliable backend systems."
           />
           <ToolboxItems
             items={backendToolbox}
@@ -109,7 +170,7 @@ export const AboutSection = () => {
         <Card className="h-[360px] p-0 flex flex-col md:col-span-3">
           <CardHeader
             title="My Hobby"
-            description="Explore my interests and hobbies"
+            description="A glimpse into activities I enjoy outside of engineering."
           />
           <DragCard hobby={hobby} />
         </Card>
