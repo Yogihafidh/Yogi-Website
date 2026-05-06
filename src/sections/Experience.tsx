@@ -9,7 +9,7 @@ import { useState } from "react";
 const experiencesList = [
   {
     name: "Telkom Indonesia",
-    position: "Frontend Developer Intern",
+    position: "Web Developer Intern",
     period: "Aug 2025 – Dec 2025 · On-site",
     text: "Contributed to the development and modernization of an internal chatbot platform used by 50+ administrative users, focusing on scalability, performance, and usability.",
 
