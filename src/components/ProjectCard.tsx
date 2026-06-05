@@ -8,6 +8,7 @@ import { Overlay } from "./Overlay";
 
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+import { ImageLightbox } from "./ImageLightbox";
 import { IoMdClose } from "react-icons/io";
 
 export type ProjectGalleryItem = {
@@ -23,6 +24,8 @@ export type Project = {
   role: string;
   context: string;
   problem?: string;
+  projectOverview?: string;
+  myRole?: string;
   approach: string;
   architecture: string;
   features: string[];
@@ -89,7 +92,7 @@ export const ProjectCard = ({ project, projectIndex }: ProjectCardProps) => {
           <p className="mb-6 text-gray-700">{truncate(project.context, 40)}</p>
 
           {project.impact && project.impact.length > 0 && (
-            <div className="mb-6">
+            <div className="hidden md:block mb-6">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-600 mb-3">
                 Key Impact
               </p>
@@ -142,17 +145,34 @@ export const ProjectCard = ({ project, projectIndex }: ProjectCardProps) => {
                 className="absolute top-5 right-5 size-8 md:top-10 md:right-10 md:size-10 cursor-pointer hover:text-red-500"
               />
 
-              <div className="font-bold uppercase tracking-widest inline-flex flex-col md:flex-row gap-2 mb-4 md:mb-5 text-sm text-gray-700">
+              <div className="font-bold uppercase tracking-widest inline-flex flex-col md:flex-row gap-2 mb-1 md:mb-2 text-sm text-gray-700">
                 <span>{project.organization}</span>
-                <span>•</span>
-                <span>{project.period}</span>
                 <span>•</span>
                 <span>{project.role}</span>
               </div>
+              <p className="text-gray-600 mb-4">{project.period}</p>
 
               <h3 className="mb-4 md:mb-5 font-serif text-3xl md:text-4xl">
                 {project.title}
               </h3>
+
+              <div className="mb-6">
+                <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500">
+                  Project Overview
+                </h4>
+                <p className="mt-2 text-gray-700">
+                  {project.projectOverview ?? "No overview provided."}
+                </p>
+              </div>
+
+              <div className="mb-6">
+                <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500">
+                  My Role
+                </h4>
+                <p className="mt-2 text-gray-700">
+                  {project.myRole ?? "No role details provided."}
+                </p>
+              </div>
 
               {project.impact && project.impact.length > 0 && (
                 <div className="mb-6">
@@ -344,52 +364,10 @@ export const ProjectCard = ({ project, projectIndex }: ProjectCardProps) => {
           document.body,
         )}
 
-      {selectedImage &&
-        createPortal(
-          <>
-            <button
-              className="fixed inset-0 bg-black/80 z-[100] flex items-center justify-center p-4 border-none cursor-default"
-              onClick={() => setSelectedImage(null)}
-              aria-label="Close image"
-            >
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setSelectedImage(null);
-                }}
-                className="absolute top-5 right-5 size-10 flex items-center justify-center bg-white rounded-full hover:bg-gray-100 transition z-10"
-                aria-label="Close image"
-              >
-                <IoMdClose className="size-6 text-gray-900" />
-              </button>
-              <div className="w-full h-auto max-h-[75vh] flex items-center justify-center pointer-events-none">
-                <Image
-                  src={selectedImage.src}
-                  alt={selectedImage.label}
-                  width={1200}
-                  height={800}
-                  priority
-                  className="w-auto h-auto max-w-full max-h-[75vh] object-contain"
-                />
-              </div>
-            </button>
-            <div
-              className="fixed bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-black/0 p-6 z-[101] text-white"
-              style={{
-                maxWidth: "80rem",
-                left: "50%",
-                transform: "translateX(-50%)",
-                width: "calc(100% - 3rem)",
-              }}
-            >
-              <p className="text-lg font-semibold">{selectedImage.label}</p>
-              <p className="text-sm text-gray-300 mt-2">
-                {selectedImage.caption}
-              </p>
-            </div>
-          </>,
-          document.body,
-        )}
+      <ImageLightbox
+        item={selectedImage}
+        onClose={() => setSelectedImage(null)}
+      />
     </Card>
   );
 };

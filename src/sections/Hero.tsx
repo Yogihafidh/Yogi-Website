@@ -70,12 +70,12 @@ export const HeroSection = () => {
         >
           <div className="bg-gray-100 border w-max border-gray-300 p-1.5 rounded-full flex justify-center items-center gap-3 absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-10 sm:translate-y-1/2 md:translate-y-32 z-20">
             <a
-              href="https://github.com/Yogihafidh?tab=repositories"
+              href="https://drive.google.com/file/d/1v94vg2wUWP5dHfc5eTg3H-44oPtmO0b7/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
             >
               <button className="w-fit font-semibold border-2 border-gray-500 hover:bg-gray-200 px-3 py-1 md:px-6 md:py-3 rounded-full  cursor-pointer">
-                Explore My Work
+                View Portfolio
               </button>
             </a>
             <a
@@ -84,7 +84,7 @@ export const HeroSection = () => {
               rel="noopener noreferrer"
             >
               <button className="w-fit border border-gray-500 bg-gray-950 hover:bg-gray-700 text-white px-3 py-1 md:px-6 md:py-3 rounded-full cursor-pointer">
-                Hire Me!
+                Connect on LinkedIn!
               </button>
             </a>
           </div>

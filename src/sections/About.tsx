@@ -36,7 +36,6 @@ const hobby = [
   { title: "Haiking 🏞️", left: "15%", top: "10%" },
   { title: "Watching K-Drama 📺", left: "10%", top: "40%" },
   { title: "Badminton 🏸", left: "30%", top: "70%" },
-  { title: "Ngrumpi & Nggosip 🤷‍♂️", left: "60%", top: "25%" },
 ];
 
 export const AboutSection = () => {
@@ -97,14 +96,17 @@ export const AboutSection = () => {
           </p>
 
           <div className="space-y-3">
-            {["System Design", "Backend Development", "Full-stack Development", "Product Thinking"].map(
-              (item) => (
-                <div key={item} className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
-                  <span className="text-gray-700">{item}</span>
-                </div>
-              ),
-            )}
+            {[
+              "System Design",
+              "Backend Development",
+              "Full-stack Development",
+              "Product Thinking",
+            ].map((item) => (
+              <div key={item} className="flex items-center gap-3">
+                <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
+                <span className="text-gray-700">{item}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { AboutSection } from "@/sections/About";
+import { CertificationsSection } from "@/sections/Certifications";
 import { ContactSection } from "@/sections/Contact";
 import { EngineeringExpertiseSection } from "@/sections/EngineeringExpertise";
 import { ExperiencesSection } from "@/sections/Experience";
@@ -17,6 +18,7 @@ export default function Home() {
       <ProjectsSection />
       <TapeSection />
       <ExperiencesSection />
+      <CertificationsSection />
       <TapeSection />
       <EngineeringExpertiseSection />
       <EngineeringThoughtsSection />
