@@ -3,6 +3,7 @@ import coverRental from "@/assets/images/cover_rental.jpg";
 import arsitekturArbitrans from "@/assets/images/arsitektur_arbitrans.jpg";
 import arsitekturBackendPng from "@/assets/images/arsitekture-backend.png";
 import erdDesign from "@/assets/images/erd-design.png";
+import erdVehicle from "@/assets/images/ERDVehicle.jpg";
 import dashboardKoperasi from "@/assets/images/dashboard_koperasi.png";
 import pegawaiKoperasi from "@/assets/images/pegawai_koperasi.png";
 import keanggotaanKoperasi from "@/assets/images/keanggotaan koperasi.png";
@@ -28,6 +29,10 @@ const portfolioProjects: Project[] = [
     role: "Backend Engineer",
     context:
       "Reduced financial reporting time from 2–3 days to real-time by building a centralized backend system for cooperative financial operations.",
+    projectOverview:
+      "This bachelor thesis project was developed to address operational inefficiencies in a savings and loan cooperative. The existing financial recording process relied on a manual four-step workflow involving handwritten records and repeated recapitulation, resulting in reporting delays, duplicated work, and a high risk of human error. As a result, generating financial reports for more than 200 cooperative members could take up to 2–3 days. The project aimed to centralize financial operations, automate transaction processing, and provide real-time visibility into cooperative performance through a unified financial information system.",
+    myRole:
+      "As the Backend Engineer, I was responsible for analyzing operational workflows, designing the database schema and backend architecture, and developing backend services for the application. I translated business processes into technical workflows by implementing RESTful APIs, authentication and authorization systems, transaction processing logic, caching mechanisms, audit logging, and document management services. I also collaborated with the frontend developer to ensure seamless integration between the user interface and backend services.",
     problem:
       "The cooperative relied on manual and fragmented financial recording processes, leading to duplicate data entry, delayed reporting, and error-prone reconciliation. Financial reports required 2–3 days to complete, limiting real-time decision making.",
     approach:
@@ -154,7 +159,10 @@ const portfolioProjects: Project[] = [
 
     context:
       "Transformed a manual vehicle rental process (WhatsApp-based booking and handwritten records) into a structured web-based system to improve booking efficiency and operational visibility.",
-
+    projectOverview:
+      "This project was developed during my internship at PT Cazh Teknologi Inovasi for PT Arbitrans, a vehicle rental business that relied on WhatsApp communication and handwritten records to manage reservations and vehicle availability. The goal was to transform fragmented manual workflows into a centralized digital platform that streamlines reservation management, improves operational visibility, and provides a better booking experience for customers. The solution consists of a customer-facing reservation platform and an internal administration dashboard for managing vehicles, bookings, and operational data.",
+    myRole:
+      "As a Full-stack Developer, I was responsible for analyzing rental workflows, designing the frontend and backend architecture, and developing both customer-facing and administrative applications. My responsibilities included implementing the reservation workflow, integrating authentication and database services, managing booking data, designing responsive user interfaces, and ensuring smooth communication between frontend and backend components. I also collaborated with stakeholders to translate operational requirements into a structured digital system.",
     keyImpact: [
       "Replaced manual booking and record-keeping with a centralized digital system",
       "Improved customer accessibility through an online booking interface",
@@ -176,6 +184,12 @@ const portfolioProjects: Project[] = [
         caption:
           "System architecture illustrating the interaction between the customer-facing web application, admin dashboard, and Supabase backend. It highlights how booking data flows from user input into a centralized PostgreSQL database, with authentication and data management handled by Supabase, while WhatsApp integration maintains the real-world communication workflow.",
         src: arsitekturArbitrans,
+      },
+      {
+        label: "ERD",
+        caption:
+          "Entity-relationship model covering customers, vehicles, reservations, booking workflows, and operational management data.",
+        src: erdVehicle,
       },
     ],
 
